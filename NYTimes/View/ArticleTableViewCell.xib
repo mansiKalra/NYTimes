@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ArticleTableViewCell" rowHeight="120" id="B2o-8u-WMw" userLabel="Article Table View Cell" customClass="ArticleTableViewCell" customModule="NYTimes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B2o-8u-WMw" id="Nin-Vz-ECD">
+                <rect key="frame" x="0.0" y="0.0" width="341" height="119.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="111" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POST TITLE" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fe-I2-o7C" customClass="TDLabel" customModule="NYTimes" customModuleProvider="target">
+                        <rect key="frame" x="66" y="11" width="247" height="42"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="42" id="gB4-Fp-tMZ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="FG3-0l-r2d">
+                        <rect key="frame" x="66" y="58" width="247" height="53.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="222" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POST AUTHOR" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVf-AT-chh" customClass="TDLabel" customModule="NYTimes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="164.5" height="53.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="333" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YYYY-MM-DD" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3d-ZK-zHl" customClass="TDLabel" customModule="NYTimes" customModuleProvider="target">
+                                <rect key="frame" x="164.5" y="0.0" width="82.5" height="53.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="U3d-ZK-zHl" firstAttribute="width" secondItem="kVf-AT-chh" secondAttribute="width" multiplier="0.5" id="5DM-Pk-ajl"/>
+                        </constraints>
+                    </stackView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lsm-ya-TGe">
+                        <rect key="frame" x="10" y="40" width="40" height="40"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Lsm-ya-TGe" secondAttribute="height" multiplier="1:1" id="4I9-uw-Ef6"/>
+                            <constraint firstAttribute="width" constant="40" id="7Jt-Ml-VLK"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="FG3-0l-r2d" secondAttribute="bottom" constant="8" id="Ca8-iX-DxW"/>
+                    <constraint firstItem="FG3-0l-r2d" firstAttribute="leading" secondItem="8Fe-I2-o7C" secondAttribute="leading" id="O8N-rW-5wT"/>
+                    <constraint firstItem="8Fe-I2-o7C" firstAttribute="leading" secondItem="Nin-Vz-ECD" secondAttribute="leadingMargin" constant="50" id="Tmp-aI-h9O"/>
+                    <constraint firstItem="FG3-0l-r2d" firstAttribute="top" secondItem="8Fe-I2-o7C" secondAttribute="bottom" constant="5" id="aXL-d4-t6p"/>
+                    <constraint firstItem="8Fe-I2-o7C" firstAttribute="trailing" secondItem="Nin-Vz-ECD" secondAttribute="trailingMargin" constant="-20" id="bSd-xj-U4G"/>
+                    <constraint firstItem="8Fe-I2-o7C" firstAttribute="top" secondItem="Nin-Vz-ECD" secondAttribute="topMargin" id="vOj-27-nMx"/>
+                    <constraint firstItem="FG3-0l-r2d" firstAttribute="trailing" secondItem="8Fe-I2-o7C" secondAttribute="trailing" id="yP5-wC-KPr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Lsm-ya-TGe" firstAttribute="centerX" secondItem="B2o-8u-WMw" secondAttribute="centerX" multiplier="0.16" id="hvt-Kw-c50"/>
+                <constraint firstItem="Lsm-ya-TGe" firstAttribute="centerY" secondItem="B2o-8u-WMw" secondAttribute="centerY" id="nyX-9E-5qW"/>
+            </constraints>
+            <connections>
+                <outlet property="articleImageView" destination="Lsm-ya-TGe" id="ewh-Fq-Ntq"/>
+                <outlet property="authorLabel" destination="kVf-AT-chh" id="Tts-cj-ha7"/>
+                <outlet property="dateLabel" destination="U3d-ZK-zHl" id="SCG-cZ-pEC"/>
+                <outlet property="titleLabel" destination="8Fe-I2-o7C" id="P2A-s1-rW8"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

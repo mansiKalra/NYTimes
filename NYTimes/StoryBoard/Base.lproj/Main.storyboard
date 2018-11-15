@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bAJ-9z-nvA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ZwH-JT-Xoi">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="bAJ-9z-nvA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ebk-vz-LIR">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="v9G-wm-yto" kind="relationship" relationship="rootViewController" id="Txr-Oo-MJx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QTx-Ip-WcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-302" y="-886"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="7V1-IO-gdU">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="AO8-Bw-3Ms" customClass="DetailViewController" customModule="NYTimes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oeD-c0-tcq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jVz-6L-Vhf">
+                                <rect key="frame" x="16" y="20" width="343" height="407"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAs-cy-Va7">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="345"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Od-bh-g8T">
+                                                <rect key="frame" x="0.0" y="54" width="343" height="290"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="1Od-bh-g8T" secondAttribute="trailing" id="3b3-WH-kUo"/>
+                                            <constraint firstItem="1Od-bh-g8T" firstAttribute="leading" secondItem="sAs-cy-Va7" secondAttribute="leading" id="Fbl-t2-rah"/>
+                                            <constraint firstItem="1Od-bh-g8T" firstAttribute="top" secondItem="sAs-cy-Va7" secondAttribute="top" constant="54" id="LGF-IX-IRF"/>
+                                            <constraint firstAttribute="bottom" secondItem="1Od-bh-g8T" secondAttribute="bottom" constant="1" id="NdK-SG-6hg"/>
+                                            <constraint firstAttribute="width" secondItem="sAs-cy-Va7" secondAttribute="height" multiplier="343:345" id="oAM-sy-t2h"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4m4-WP-sCc" customClass="TDLabel" customModule="NYTimes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="345" width="343" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="62" id="vLz-S2-EyB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="sAs-cy-Va7" firstAttribute="top" secondItem="jVz-6L-Vhf" secondAttribute="top" id="Iue-mb-7Tg"/>
+                                    <constraint firstAttribute="trailing" secondItem="sAs-cy-Va7" secondAttribute="trailing" id="Xk4-tJ-4hM"/>
+                                    <constraint firstItem="sAs-cy-Va7" firstAttribute="leading" secondItem="jVz-6L-Vhf" secondAttribute="leading" id="jfz-mu-R8z"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oQ9-gF-dAl" firstAttribute="trailing" secondItem="jVz-6L-Vhf" secondAttribute="trailing" constant="16" id="Adg-Lk-t3w"/>
+                            <constraint firstItem="jVz-6L-Vhf" firstAttribute="leading" secondItem="oQ9-gF-dAl" secondAttribute="leading" constant="16" id="MRQ-Vf-HDp"/>
+                            <constraint firstItem="jVz-6L-Vhf" firstAttribute="top" secondItem="oQ9-gF-dAl" secondAttribute="top" id="Ssy-VL-pfg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oQ9-gF-dAl"/>
+                    </view>
+                    <connections>
+                        <outlet property="articleImageView" destination="1Od-bh-g8T" id="yR9-a3-wWQ"/>
+                        <outlet property="datailLabel" destination="4m4-WP-sCc" id="JGt-Sc-yJA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gdX-qZ-WGD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1768.8" y="133.5832083958021"/>
+        </scene>
+        <!--Article List View Controller-->
+        <scene sceneID="7o7-vK-a4u">
+            <objects>
+                <viewController storyboardIdentifier="ArticleListViewController" id="v9G-wm-yto" customClass="ArticleListViewController" customModule="NYTimes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h57-1X-Ksj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pFb-gX-lfv">
+                                <rect key="frame" x="5" y="20" width="365" height="647"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="snB-88-wZ1" firstAttribute="trailing" secondItem="pFb-gX-lfv" secondAttribute="trailing" constant="5" id="GKn-9l-Ycm"/>
+                            <constraint firstItem="snB-88-wZ1" firstAttribute="bottom" secondItem="pFb-gX-lfv" secondAttribute="bottom" id="RPh-uC-ghG"/>
+                            <constraint firstItem="pFb-gX-lfv" firstAttribute="top" secondItem="snB-88-wZ1" secondAttribute="top" id="VCf-cC-vBx"/>
+                            <constraint firstItem="pFb-gX-lfv" firstAttribute="leading" secondItem="snB-88-wZ1" secondAttribute="leading" constant="5" id="oEN-ZH-l6d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="snB-88-wZ1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7uL-EE-k11"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="tblArticle" destination="pFb-gX-lfv" id="iu4-6Q-Pd1"/>
+                        <outlet property="tblViewTopConstraints" destination="VCf-cC-vBx" id="Gub-MX-KiQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tjC-XX-wh8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="610" y="-869"/>
+        </scene>
+    </scenes>
+</document>
